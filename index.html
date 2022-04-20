@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="container">
-            <h1 class="page_title">Weather Dashboard</h1>
+            <h1 class="page_title">Event Planner</h1>
 
         </div>
     </header>
@@ -42,16 +42,80 @@
 
                 </div>
 
-                <!-- Beginning of the section that holds the weather reports -->
-                <div class="column report_container" id="general_report_container">
 
-                    <div id="todays_date">
-                        <!-- 
-                            The JavaScript setInterval function will insert today’s date here dynamically
-                        -->
+                
+                <div id="todays_date">
+                    <!-- 
+                        The JavaScript setInterval function will insert today’s date here dynamically
+                    -->
+                </div>
+                <div class="report_container column" id="event_report_container">
+                    
+
+                    <div class="row">
+                      <div class="col-xs-6">
+                      <div id='events-panel' class="panel panel-primary">
+                        <div class="panel-heading">
+                          <h3 class="panel-title">Events</h3>
+                        </div>
+                        <div class="panel-body">
+                          <div id="events" class="list-group">
+                            <a href="#" class="list-group-item">
+                              <h4 class="list-group-item-heading">Event title</h4>
+                              <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                              <p class="venue"></p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                              <h4 class="list-group-item-heading">Event title</h4>
+                              <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                              <p class="venue"></p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                              <h4 class="list-group-item-heading">Event title</h4>
+                              <p class="list-group-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illo autem animi consequuntur, nesciunt facilis consequatur fuga! Consequatur eius molestiae et, debitis nulla quibusdam corporis corrupti sed cum labore natus aspernatur perferendis modi architecto doloribus laudantium ex hic, odit quia excepturi maxime esse unde. Alias pariatur dolor ad sint tempora!</p>
+                              <p class="venue"></p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                              <h4 class="list-group-item-heading">Event title</h4>
+                              <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                              <p class="venue"></p>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="panel-footer">
+                          <nav>
+                            <ul class="pager">
+                              <li id="prev" class="previous"><a href="#"><span aria-hidden="true">&larr;</span></a></li>
+                              <li id="next" class="next"><a href="#"><span aria-hidden="true">&rarr;</span></a></li>
+                            </ul>
+                          </nav>
+                        </div>
+                      </div>
+                      
+                      <div id='attraction-panel' class="panel panel-primary">
+                        <div class="panel-heading">
+                          <h3 class="panel-title">Attraction</h3>
+                        </div>
+                        <div id="attraction" class="panel-body">
+                          <h4 class="list-group-item-heading">Attraction title</h4>
+                          <img class="col-xs-12" src="">
+                          <p id="classification"></p>
+                        </div>
+                      </div>
+                      </div>
                     </div>
+                  </div>
+
+
+                <!-- Beginning of the section that holds the weather reports -->
+                <div class="report_container" id="general_weather_report_container">
+
                     <div class="flex-container report_container">
 
+
+
+  
+                          
                         <!-- This is the section that holds the current date wather report. -->
                         <div class="report_container" id="today_weather_report_container">
 

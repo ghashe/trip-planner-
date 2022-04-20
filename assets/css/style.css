@@ -25,13 +25,13 @@ body {
 /* Adding styling to the header section */
 header {
     background: var(--second_choice);
-    padding: 30px 25px;
     border-bottom: 5px solid var(--first_choice);
+    text-align: center;
+    font-size: 1.5em;
 }
 
 .page_title {
     color: var(--first_choice);
-    margin: 0 0 0 50px;
     font-size: 4em;
 }
 
@@ -41,13 +41,11 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 25px auto;
-    width: 97%;
+    width: 100%;
 }
 
 .weather_report_container {
     flex: 1;
-    margin: 0 20px 20px;
     height: 3000px;
 }
 
@@ -62,21 +60,13 @@ header {
     overflow: scroll;
 }
 
-.flex-container {
-    display: inline;
-    background-color: #290f99;
-    width: 100px;
-    height: auto;
-    text-align: left;
-}
-
 /* Create two columns that floats next to each other that holds the search bar and section that holds the report*/
 .column {
     float: left;
-    width: 50%;
+    width: 100%;
     height: 700px;
     padding: 10px;
-    overflow: auto;
+    overflow: scroll;
 }
 
 /* Adding styling to the search bar */
@@ -85,8 +75,8 @@ header {
     background: rgb(173, 216, 230, .3);
     border-radius: 2px;
     float: left;
-    margin: 10px 10px 10px 10px;
-    width: 250px;
+    margin: 32px 10px 10px 10px;
+    width: 200px;
     height: auto;
     overflow: auto;
 }
@@ -94,10 +84,11 @@ header {
 /* Style the search field */
 form.search_location input[type=text] {
     padding: 10px;
-    font-size: 17px;
+    font-size: 15px;
     border: 1px solid grey;
     float: left;
     width: 80%;
+    height: 40px;
     background: #f1f1f1;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -106,14 +97,14 @@ form.search_location input[type=text] {
 /* Style the submit button */
 form.search_location button {
     float: left;
-    width: 20%;
+    width: 35px;
+    height: 40px;
     padding: 10px;
     background: #2196F3;
     color: white;
     font-size: 17px;
     border: 1px solid grey;
     border-left: none;
-    /* Prevent double borders */
     cursor: pointer;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -137,7 +128,6 @@ form.search_location::after {
     margin-top: 10px;
     width: auto;
     height: auto;
-    /* border: 1px solid var(--second_choice); */
     border-end-end-radius: 5px;
     border-bottom-left-radius: 5px;
 }
@@ -161,15 +151,7 @@ form.search_location::after {
     background: #6aadeb;
 }
 
-/* Adding styling to the section that holds the weather report */
-#general_report_container {
-    margin: 10px 10px 10px 10px;
-    border: 1px solid var(--fourth_choice);
-    border-radius: 2px;
-    height: auto;
-}
-
-/* Adding styling to the section that holds yoday's weather report */
+/* Adding styling to the section that holds the report */
 
 #todays_date {
     color: rgb(0, 0, 0);
@@ -178,18 +160,46 @@ form.search_location::after {
     text-align: center;
 }
 
-#today_weather_report_container h3 {
-    color: black;
-    margin-left: 10px;
-    font-size: 2em;
-    line-height: 35px;
+#event_report_container,
+#general_weather_report_container {
+    border: 1px solid var(--fourth_choice);
+    border-radius: 2px;
+    height: 800px;
+    overflow: auto;
 }
 
-#today_weather_report_box .date_box {
-    align-items: left;
-    margin-right: 0;
-    border-bottom: 1px solid rgb(167, 163, 163);
-    font-size: 1.4em;
+
+#events {
+    border: 2px solid rgb(50, 51, 52);
+    border-bottom: 0px solid rgb(20, 20, 20);
+}
+#events a:link {
+    padding-left: 10px;
+    display: block;
+    border-bottom: 1px solid rgb(20, 20, 20);
+    text-decoration: none;
+    width: 100%;
+   }
+.panel-footer ul {
+    display: flex;
+   
+}
+.panel-footer li #prev a{
+    flex: 1; 
+    margin-left: 50px;
+}
+
+.panel-footer li #next a{
+    margin-: 50px;
+}
+/* Adding styling to the section that holds the weather report */
+
+/* Adding styling to the section that holds tyoday's weather report */
+#today_weather_report_container h3 {
+    color: black;
+    margin: 20px 0 5px 10px;
+    font-size: 1.5em;
+    line-height: 1px;
 }
 
 #today_weather_report_box {
@@ -197,13 +207,31 @@ form.search_location::after {
     padding: 10px;
 }
 
+#event_report_container{
+    background: rgb(180, 205, 210, .8);
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    margin: 10px;
+    padding: 0 20px 0 30px;
+    width: 40%;
+    border: 1px solid var(--first_choice);
+    line-height: 2em;
+}
+#general_weather_report_container {
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    margin: 10px 0 10px 0;
+    padding: 0 20px 0 20px;
+    border: 1px solid var(--first_choice);
+    line-height: 2em;
+}
+
 #today_weather_report_container {
     background: rgb(180, 205, 210, .8);
     color: rgb(0, 0, 0);
-    font-size: 1.5em;
-    margin: 10px 0 10px 0;
+    font-size: 1em;
+    margin: 10px;
     padding: 0 20px 0 30px;
-    width: 100%;
     border: 1px solid var(--first_choice);
     border-radius: 15px;
     line-height: 12px;
@@ -212,15 +240,15 @@ form.search_location::after {
 /* Adding styling to the section that holds the weekly weather forcast report */
 #weekly_report_container h2 {
     color: #000000;
-    font-size: 2.6em;
-    height: 40px;
-    padding: 6px 10px 0 0;
+    font-size: 1.7em;
+    height: 30px;
+    margin: 0;
+    padding: 7px 0 6px 0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom: 1px solid var(--color_7);
     text-align: center;
     background-color: rgba(255, 255, 255, 0.3);
-
 }
 
 .weekly_list_container {
@@ -230,15 +258,18 @@ form.search_location::after {
     align-items: center;
     align-content: center;
 }
+#weekly_report_container {
+    width: 100%;
+    margin: 10px;
+}
 
 .weekly_list_container>div {
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0, .6);
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 160px;
     margin: 15px;
     border-radius: 15px;
-
 }
 
 .report_container_box h6 {
@@ -272,7 +303,7 @@ margin-bottom: 10px;
 }
 
 /* Applying media query to create different layouts depending on the size of the viewport make */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
     
     header {
         margin-top: 0;
@@ -299,8 +330,15 @@ margin-bottom: 10px;
         background-color: white;
         border: none;
         padding: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 
+    #todays_date {
+        display: inline-block;
+        margin: 0;
+        width: 100%;
+    }
     .column {
         width: 100%;
     }
@@ -315,8 +353,11 @@ margin-bottom: 10px;
         line-height: 25px;
     }
 
+    #event_report_container,
     #weekly_report_container {
         width: 100%;
+        margin-left: 0;
+        margin-left: 0;
     }
 
     .weekly_list_container {
@@ -326,5 +367,5 @@ margin-bottom: 10px;
     .weekly_list_container>div {
         margin: 15px auto 15px auto;
     }
-
+   
 }
